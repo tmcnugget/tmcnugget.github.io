@@ -1,6 +1,6 @@
 /* Load the custom font using @font-face */
 @font-face {
-    font-family: 'font';
+    font-family: 'main';
     src: url('assets/fonts/main.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
@@ -8,7 +8,7 @@
 
 /* Apply the custom font to the body */
 body {
-    font-family: 'font', Arial, sans-serif;
+    font-family: 'main', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
