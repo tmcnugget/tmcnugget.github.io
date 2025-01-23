@@ -41,15 +41,23 @@ main {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
+
+}
+ul#blog-list {
+    padding: 0;
+    list-style: none;
 }
 
-article {
-    margin-bottom: 20px;
-}
-
-footer {
-    text-align: center;
+ul#blog-list li {
     padding: 10px;
-    background-color: #333;
-    color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+ul#blog-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul#blog-list li a:hover {
+    color: #007bff;
 }
