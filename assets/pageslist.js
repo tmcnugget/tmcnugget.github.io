@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Array of blog files in /assets/blogs/
     const blogFiles = [
-        { name: 'post1_23012025.html', title: 'Starting the site!' }
+        { name: '23012025.html', title: 'Starting the site!' }
     ];
 
-    // Sort blog files by date
+    // Sort blog files by date (ddmmyyyy format)
     blogFiles.sort((a, b) => {
-        const dateA = a.name.split('_')[1];
-        const dateB = b.name.split('_')[1];
-        return dateB.localeCompare(dateA); // Sort descending by date
+        return b.name.localeCompare(a.name); // Sort descending by date
     });
 
     // Get the blog list container
@@ -19,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
         link.href = `blogs/${blog.name}`;
-        link.textContent = `${blog.title} (${blog.name.split('_')[1]})`;
+        link.textContent = `${blog.title} (${blog.name.slice(0, 8)})`; // Format as ddmmyyyy
         listItem.appendChild(link);
         blogList.appendChild(listItem);
     });
