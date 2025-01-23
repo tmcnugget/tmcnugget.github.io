@@ -1,0 +1,55 @@
+/* Load the custom font using @font-face */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('assets/fonts/my-font.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the custom font to the body */
+body {
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
