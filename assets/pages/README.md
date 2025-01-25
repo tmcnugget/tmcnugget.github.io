@@ -51,3 +51,4 @@
 
  - Name it ```ddmmyyy```:
      - Example: ```24012013``` 24 January, 2013
+     - Set it to the date you publish it
