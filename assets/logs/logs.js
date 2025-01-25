@@ -19,8 +19,8 @@ async function loadBlogPosts() {
             blogList.appendChild(listItem);
         });
     } catch (error) {
-        console.error('Error loading blog posts:', error);
-        blogList.innerHTML = '<li>Failed to load pages. Please try again later.</li>';
+        console.error('Error loading logs:', error);
+        blogList.innerHTML = '<li>Failed to load logs. Please try again later.</li>';
     }
 }
 
