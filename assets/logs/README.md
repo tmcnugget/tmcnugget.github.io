@@ -52,7 +52,7 @@
     </main>
     <main>
         <article>
-            <p>That's the end of the post! See you next post!</p>
+            <p>That's the end of the post! See you next time!</p>
         </article>
     </main>
 </body>
