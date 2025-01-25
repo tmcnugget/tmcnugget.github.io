@@ -13,7 +13,7 @@ async function loadBlogPosts() {
         posts.forEach(post => {
             const listItem = document.createElement('li');
             const link = document.createElement('a');
-            link.href = `/assets/pages/${post}`;
+            link.href = `/logs/${post}`;
             link.textContent = post.replace('.html', ''); // Show the date as the title
             listItem.appendChild(link);
             blogList.appendChild(listItem);
