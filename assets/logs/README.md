@@ -1,16 +1,16 @@
-# How to add a new page:
+# How to add a new log:
 
- Create the HTML file:
+ Create a new HTML file:
 
  - Use the template:
 
-```<!DOCTYPE html>
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post title - tmcnugget.github.io</title>
+    <title>Post name - tmcnugget.github.io</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -32,27 +32,32 @@
                 needed: <strong>bold</strong>, <em>italic</em>, lists, and more.
             </p>
         </article>
+    </main>
+    <main>
         <article>
             <section>
                 <h3>Section Title</h3>
                 <p>Content for this section goes here. You can split your post into multiple sections to make it more readable.</p>
             </section>
         </article>
+    </main>
+    <main>
         <article>
             <section>
                 <h3>Another Section</h3>
                 <p>Continue writing the rest of the post in a similar format, adding sections as necessary.</p>
             </section>
         </article>
+    </main>
+    <main>
         <article>
             <p>That's the end of the post! See you next post!</p>
         </article>
     </main>
 </body>
 </html>
-
 ```
 
  - Name it ```ddmmyyy```:
-     - Example: ```24012013``` 24 January, 2013
-     - Set it to the date you publish it
+     - Example: ```24011984``` 24 January, 1984
+     - Set it to the date you publish the log
