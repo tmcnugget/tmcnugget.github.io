@@ -5,11 +5,12 @@
  - Use the template:
 
 ```<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name name - tmcnugget.github.io</title>
+    <title>Post title - tmcnugget.github.io</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -22,7 +23,6 @@
             </ul>
         </nav>
     </header>
-
     <main>
         <article>
             <h2>Subtitle or Intro</h2>
@@ -31,22 +31,26 @@
                 here, share thoughts, news, ideas, or experiences. Format your content as
                 needed: <strong>bold</strong>, <em>italic</em>, lists, and more.
             </p>
-
+        </article>
+        <article>
             <section>
                 <h3>Section Title</h3>
                 <p>Content for this section goes here. You can split your post into multiple sections to make it more readable.</p>
             </section>
-
+        </article>
+        <article>
             <section>
                 <h3>Another Section</h3>
                 <p>Continue writing the rest of the post in a similar format, adding sections as necessary.</p>
             </section>
-
-            <p>That's the end of the post!</p>
+        </article>
+        <article>
+            <p>That's the end of the post! See you next post!</p>
         </article>
     </main>
 </body>
 </html>
+
 ```
 
  - Name it ```ddmmyyy```:
