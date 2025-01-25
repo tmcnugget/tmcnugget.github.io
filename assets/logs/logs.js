@@ -2,7 +2,7 @@ async function loadBlogPosts() {
     const blogList = document.getElementById('blog-list');
 
     try {
-        const response = await fetch('logs.json'); // Adjust the path as necessary
+        const response = await fetch('/assets/logs/logs.json'); // Adjust the path as necessary
         if (!response.ok) throw new Error('Failed to fetch logs list');
         const posts = await response.json();
 
