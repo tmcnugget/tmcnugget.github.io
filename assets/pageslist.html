@@ -30,8 +30,8 @@
 
             try {
                 // Fetch the directory listing from /posts
-                const response = await fetch('/posts/');
-                if (!response.ok) throw new Error('Failed to fetch posts directory');
+                const response = await fetch('/pages/');
+                if (!response.ok) throw new Error('Failed to fetch pages directory');
                 const text = await response.text();
 
                 // Parse the directory listing (Assumes server auto-generates a file listing in plain HTML)
@@ -56,7 +56,7 @@
                 });
             } catch (error) {
                 console.error('Error loading blog posts:', error);
-                blogList.innerHTML = '<li>Failed to load posts. Please try again later.</li>';
+                blogList.innerHTML = '<li>Failed to load pages. Please try again later.</li>';
             }
         }
 
