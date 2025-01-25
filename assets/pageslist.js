@@ -13,14 +13,14 @@ async function loadBlogPosts() {
         posts.forEach(post => {
             const listItem = document.createElement('li');
             const link = document.createElement('a');
-            link.href = `../assets/pages/${post}`;
+            link.href = `/assets/pages/${post}`;
             link.textContent = post.replace('.html', ''); // Show the date as the title
             listItem.appendChild(link);
             blogList.appendChild(listItem);
         });
     } catch (error) {
         console.error('Error loading blog posts:', error);
-        blogList.innerHTML = '<li>Failed to load posts. Please try again later.</li>';
+        blogList.innerHTML = '<li>Failed to load pages. Please try again later.</li>';
     }
 }
 
