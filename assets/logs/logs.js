@@ -23,6 +23,6 @@ async function loadBlogPosts() {
         blogList.innerHTML = '<li>Failed to load logs. Please try again later.</li>';
     }
 }
-tiv
+
 // Load posts after the DOM is ready
 document.addEventListener('DOMContentLoaded', loadBlogPosts);
