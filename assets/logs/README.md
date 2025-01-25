@@ -19,7 +19,8 @@
         <nav>
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/assets/pageslist.html">Pages List</a></li>
+                <li><a href="/logs.html">All Logs</a></li>
+                <li><a href="/projects.html">All Projects</a></li>
             </ul>
         </nav>
     </header>
