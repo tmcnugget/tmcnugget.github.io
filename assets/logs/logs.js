@@ -3,7 +3,7 @@ async function loadBlogPosts() {
 
     try {
         const response = await fetch('logs.json'); // Adjust the path as necessary
-        if (!response.ok) throw new Error('Failed to fetch posts list');
+        if (!response.ok) throw new Error('Failed to fetch logs list');
         const posts = await response.json();
 
         // Sort posts in descending order (newest at the top)
@@ -23,6 +23,6 @@ async function loadBlogPosts() {
         blogList.innerHTML = '<li>Failed to load logs. Please try again later.</li>';
     }
 }
-
+tiv
 // Load posts after the DOM is ready
 document.addEventListener('DOMContentLoaded', loadBlogPosts);
