@@ -23,45 +23,6 @@
             <!-- Blog posts will be dynamically injected here -->
         </ul>
     </main>
-
-    <script>
-        async function loadBlogPosts() {
-            const blogList = document.getElementById('blog-list');
-
-            try {
-                // Fetch the directory listing from /posts
-                const response = await fetch('/pages/');
-                if (!response.ok) throw new Error('Failed to fetch pages directory');
-                const text = await response.text();
-
-                // Parse the directory listing (Assumes server auto-generates a file listing in plain HTML)
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const links = [...doc.querySelectorAll('a')];
-
-                // Filter links that match the mmddyyyy.html pattern
-                const postFiles = links
-                    .map(link => link.getAttribute('href'))
-                    .filter(name => /^\d{8}\.html$/.test(name))
-                    .sort((a, b) => b.localeCompare(a)); // Sort descending for newest at top
-
-                // Generate the list items
-                postFiles.forEach(post => {
-                    const listItem = document.createElement('li');
-                    const link = document.createElement('a');
-                    link.href = `/posts/${post}`;
-                    link.textContent = post.replace('.html', ''); // Show the date as the title
-                    listItem.appendChild(link);
-                    blogList.appendChild(listItem);
-                });
-            } catch (error) {
-                console.error('Error loading blog posts:', error);
-                blogList.innerHTML = '<li>Failed to load pages. Please try again later.</li>';
-            }
-        }
-
-        // Load blog posts on page load
-        document.addEventListener('DOMContentLoaded', loadBlogPosts);
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
