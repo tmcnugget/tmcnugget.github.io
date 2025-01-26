@@ -12,7 +12,6 @@
 
 /* Hover effect */
 #venix-link:hover {
-    background-color: #fff8e7; /* Darker shade of blue on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Intensifies the shadow */
     transform: translateY(-2px); /* Gives a slight lift effect */
 }
