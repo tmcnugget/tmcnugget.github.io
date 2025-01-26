@@ -62,3 +62,5 @@
  - Name it ```ddmmyyy```:
      - Example: ```24011984``` 24 January, 1984
      - Set it to the date you publish the log
+
+  - Now, follow [these](/assets/logs/README.md) instructions
