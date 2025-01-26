@@ -1,24 +1,19 @@
 /* Style for the button-like <main> */
 #venix-link {
-    display: inline-block; /* Makes it behave like a block-level button */
     padding: 16px 24px; /* Adds spacing inside the element */
-    margin: 20px; /* Adds space around the element */
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    font-size: 18px; /* Button text size */
-    text-align: center; /* Centers the text */
-    text-decoration: none; /* Removes the underline for the text */
+    margin: 20px auto; /* Adds space around the element */
+    max-width: 800px;
     border: none; /* Removes default borders */
     border-radius: 8px; /* Rounds the corners */
     cursor: pointer; /* Shows a pointer cursor on hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
     transition: all 0.2s ease; /* Adds a smooth animation for hover effects */
 }
 
 /* Hover effect */
 #venix-link:hover {
-    background-color: #0056b3; /* Darker shade of blue on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Intensifies the shadow */
+    background-color: #fff8e7; /* Darker shade of blue on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Intensifies the shadow */
     transform: translateY(-2px); /* Gives a slight lift effect */
 }
 
