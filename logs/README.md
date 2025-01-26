@@ -1,6 +1,6 @@
 # How to add a new log:
 
- Create a new HTML file:
+ Create a new HTML file in the ```/logs/``` directory:
 
  - Use the template:
 
@@ -63,4 +63,5 @@
      - Example: ```24011984``` 24 January, 1984
      - Set it to the date you publish the log
 
-  - Now, follow [these](/assets/logs/README.md) instructions
+ - Open and modify [logs.json](/assets/logs/logs.json)
+ - Add a line, indented 4 spaces: ```"ddmmyyyy.html",``` the ```ddmmyyyy``` being the same date as the one you added when you named the html template (earlier in these instructions)
