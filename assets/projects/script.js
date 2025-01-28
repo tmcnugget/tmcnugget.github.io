@@ -9,6 +9,6 @@ mainLink.addEventListener("click", () => {
 // Add keyboard accessibility (trigger on Enter key press)
 mainLink.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-        window.location.href = "/projects/venix.html";
+        window.location.href = "/projects/venix";
     }
 });
