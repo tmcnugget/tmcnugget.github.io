@@ -52,6 +52,28 @@ main {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+code {
+    font-family: 'Courier New', monospace;
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+pre code {
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+code .keyword { color: #569cd6; }
+code .string { color: #ce9178; }
+code .comment { color: #6a9955; font-style: italic; }
+code .number { color: #b5cea8; }
+
 /* Add some modern styles for the link boxes */
 #blog-list {
     display: grid;
