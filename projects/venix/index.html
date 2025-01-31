@@ -32,95 +32,14 @@
     <main>
         <article>
             <section>
-                <h3>Introducing... Venix!</h3>
+                <h3>From Input to Output</h3>
                 <p>
-                    Venix is an omnidirectional robot built to handle complex movements and challenging environments. 
-                    Unlike traditional robots, which can only move in straight lines or arcs, Venix leverages four mecanum wheels, which allow it to move in any direction—forward, backward, sideways, or rotate—without changing its orientation. 
-                    This provides unparalleled maneuverability in tight spaces and makes it ideal for indoor navigation or cluttered environments.
-                    <br>
-                    The robot's control system is powered by a Raspberry Pi 0 2W, which processes all commands and interfaces with various sensors and input devices. 
-                    The combination of the Raspberry Pi and Python gives you access to a vast array of libraries and customization options, allowing you to tweak and expand functionality as needed.
-                    <br>
-                    Venix was created to be more than just a robotic platform for remote control. 
-                    With future upgrades such as LiDAR for real-time obstacle avoidance and a robot arm for handling objects, Venix has the potential to evolve into a fully autonomous mobile robot capable of performing tasks like mapping, object manipulation, and even autonomous navigation.
+                    Venix is heavily off of a Raspberry Pi 0, with it small yet powerful capabilities. The processing begins its journey at a wireless USB joystick with the <code>pygame</code> library, getting and setting x and y axis values.
+                    Then, the main processing script gets the axis data and convertes them to motor values via inverse kinematics. It then calculates the appropriate PWM channels for the PCA9685 and sends the values via the <code>busio</code> library (<code>I<index>2</index>C</code>)
+                    The PCA9685 scales the values and sets PWM. The motor drivers (MDD3A) receives these PWM values and sets all 4 motors accordingly.
                 </p>
             </section>
         </article>
-    </main>
-    <main>
-        <article>
-            <section>
-                <h3>Power and Power Management 🔌</h3>
-                <p>
-                <strong>Power Source:</strong> Venix is powered by a 12V AA battery pack consisting of eight AA batteries arranged in series. 
-                This power source is capable of driving all four motors, the Raspberry Pi, and any additional peripherals. 
-                A voltage regulator ensures that the Raspberry Pi receives a consistent 5V, providing a stable power supply for smooth operation. 
-                This is critical because fluctuations in voltage could cause the Pi to reset or fail to respond to commands, disrupting the robot's performance.
-                <br>
-                <strong>Battery Life:</strong> With a typical operating time of 1.5 hours when running at 50% speed, the 12V AA battery pack provides an adequate runtime for most tasks. 
-                However, the actual battery life can vary depending on the terrain, the complexity of the movements, and the overall load placed on the motors. 
-                The power management system is designed to keep the robot running for long enough to complete most missions. 
-                Future plans include integrating power monitoring systems to alert users when the battery is low or when the robot is consuming more power than expected, providing better insight into its energy consumption.
-                </p>
-            </section>
-        </article>
-    </main>
-    <main>
-        <article>
-            <section>
-                <h3>Control and Input System</h3>
-                <p>
-                <strong>Joystick:</strong> The primary method of controlling Venix is through an analog joystick. Analog joysticks provide smooth, continuous input compared to digital ones, which only send discrete "on" or "off" signals. 
-                This gives the user fine control over the robot's movement, which is essential for tasks requiring precision, like navigating through tight spaces. The joystick sends three types of signals: forward-backward, left-right, and rotational movement.
-                <br>
-                <strong>Software Configuration:</strong> To ensure smooth control, Venix uses the pygame library to read the joystick input. 
-                The library processes the analog signals and translates them into commands for the robot. To improve the user experience, the software applies a deadzone to the joystick input. This means that small, unintended movements of the joystick won’t cause the robot to move. 
-                Additionally, acceleration scaling is used to gradually increase speed, making low-speed control much smoother and more intuitive.
-                <br>
-                <strong>Control System:</strong> The Raspberry Pi acts as the central controller for the robot, handling all input, sending motor control data, and decision-making processes. 
-                The Python scripts running on the Pi read the joystick input, process it, and translate it into PWM signals that control the motors. A key feature of the control system is its use of custom algorithms to handle turning and speed adjustment. 
-                Rather than just applying a simple formula for turning, the system uses advanced logic to gradually adjust motor speeds, ensuring smooth and precise rotations that avoid jerky movements.
-                </p>
-            </section>
-        </article>
-    </main>
-    <main>
-        <article>
-            <section>
-                <h3>Motor Control and Kinematics</h3>
-                <p>
-                <strong>Motor Drivers:</strong> Venix uses four DC motors powered by two Cytron MDD3A 3-Amp motor drivers. 
-                These drivers handle the high current demands of the motors, ensuring that each motor receives the necessary voltage and current for smooth operation. 
-                The drivers receive PWM signals from the Waveshare PCA9685 HAT, which allows precise control over the speed and direction of each motor through I2C communication. 
-                This setup enables Venix to achieve highly accurate movement, even with complex maneuvers.
-                <br>
-                <strong>Movement Algorithm:</strong> The kinematics of Venix are calculated based on the inputs received from the joystick. 
-                The control algorithm uses a set of mathematical equations to determine the appropriate motor speeds for each of the four wheels, factoring in all movement. 
-                For example, if the user wants to move forward, the algorithm calculates how much power each motor should receive to push the robot in a straight line. 
-                For turning, the algorithm adjusts motor speeds in a way that ensures a smooth and accurate rotation.
-                <br>
-                <strong>Speed and Turning Control:</strong> Advanced algorithms are used to control both speed and turning. Rather than applying a fixed speed to the motors, the system gradually increases the speed, allowing for smoother acceleration and deceleration. The turning algorithm is particularly sophisticated, ensuring that each motor's speed is adjusted incrementally for smooth rotations. This reduces the risk of the robot jerking or losing balance during turning, which is especially important for indoor navigation.
-                </p>
-            </section>
-        </article>
-    </main>
-    <main>
-        <article>
-            <section>
-                <h3>Power and Power Management 🔌</h3>
-                <p>
-                <strong>Power Source:</strong> Venix is powered by a 12V AA battery pack consisting of eight AA batteries arranged in series. 
-                This power source is capable of driving all four motors, the Raspberry Pi, and any additional peripherals. 
-                A voltage regulator ensures that the Raspberry Pi receives a consistent 5V, providing a stable power supply for smooth operation. 
-                This is critical because fluctuations in voltage could cause the Pi to reset or fail to respond to commands, disrupting the robot's performance.
-                <br>
-                <strong>Battery Life:</strong> With a typical operating time of 1.5 hours when running at 50% speed, the 12V AA battery pack provides an adequate runtime for most tasks. 
-                However, the actual battery life can vary depending on the terrain, the complexity of the movements, and the overall load placed on the motors. 
-                The power management system is designed to keep the robot running for long enough to complete most missions. 
-                Future plans include integrating power monitoring systems to alert users when the battery is low or when the robot is consuming more power than expected, providing better insight into its energy consumption.
-                </p>
-            </section>
-        </article>
-    </main>
+</main>
 </body>
 </html>
