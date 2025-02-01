@@ -35,11 +35,19 @@
                 <h3>From Input to Output</h3>
                 <p>
                     Venix is heavily off of a Raspberry Pi 0, with it small yet powerful capabilities. The processing begins its journey at a wireless USB joystick with the <code>pygame</code> library, getting and setting x and y axis values.
-                    Then, the main processing script gets the axis data and convertes them to motor values via inverse kinematics. It then calculates the appropriate PWM channels for the PCA9685 and sends the values via the <code>busio</code> library (<code>I<sup>2</sup>C</code>)
+                    Then, the main processing script gets the axis data and convertes them to motor values via inverse kinematics. It then calculates the appropriate PWM channels for the PCA9685 and sends the values via the <code>busio</code> library (<code>I<sup>2</sup>C</code>).
                     The PCA9685 scales the values and sets PWM. The motor drivers (MDD3A) receives these PWM values and sets all 4 motors accordingly.
                 </p>
+                <img scr="/assets/projects/venix/flow.svg" alt="Flow chart of input to output">
             </section>
         </article>
+</main>
+<main>
+    <article>
+        <section>
+            <h3></h3>
+        </section>
+    </article>
 </main>
 </body>
 </html>
